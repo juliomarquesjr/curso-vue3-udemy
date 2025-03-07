@@ -1,5 +1,6 @@
 <template>
   <main>
+    <Header />
     <h1>Home Page</h1>
     <h3>Contador: {{ count }}</h3>
     <button v-on:click="count++">Adicionar</button>
