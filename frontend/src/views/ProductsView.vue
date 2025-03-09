@@ -3,6 +3,8 @@
 
         <Header v-if="showHeader" />
 
+        <button v-on:click="count++">Botao 1 {{ count }}</button>
+        <button @click="addmais2">Botao 2 {{ count }}</button>
         <h1>Produtos Page</h1>
         <ul>
             <li v-for="user in users.data" :key="user.id">
@@ -17,10 +19,15 @@
 <script setup>
 import http from "@/services/http.js";
 import Header from "@/components/Header.vue";
-import { onMounted, reactive } from "vue";
+import { onMounted, reactive, ref } from "vue";
 
 let users = reactive({data: []});
-const showHeader = true;
+const showHeader = false;
+const count = ref(0);
+
+function addmais2(){
+    count.value+=2;
+}
 
 onMounted(async () => {
     try{
@@ -31,5 +38,6 @@ onMounted(async () => {
         console.error(error);
     }
 });
+
 
 </script>
