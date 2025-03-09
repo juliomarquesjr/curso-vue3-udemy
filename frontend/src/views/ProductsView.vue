@@ -4,7 +4,15 @@
         <Header v-if="showHeader" />
 
         <button v-on:click="count++">Botao 1 {{ count }}</button>
-        <button @click="addmais2">Botao 2 {{ count }}</button>
+        <button @click="count++">Botao 2 {{ count }}</button>
+        <br />
+        <input type="text" v-on:keyup="add" />
+
+        <p>
+            Meu Nome: {{ myName }} <br />
+            <input type="text" v-model="myName" />
+        </p>
+
         <h1>Produtos Page</h1>
         <ul>
             <li v-for="user in users.data" :key="user.id">
@@ -24,9 +32,10 @@ import { onMounted, reactive, ref } from "vue";
 let users = reactive({data: []});
 const showHeader = false;
 const count = ref(0);
+const myName = ref("Julio");
 
-function addmais2(){
-    count.value+=2;
+function add(event){
+    count.value+=Number(event.target.value);
 }
 
 onMounted(async () => {
