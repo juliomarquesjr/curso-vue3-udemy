@@ -1,5 +1,8 @@
 <template>
-    <h1>Header Aqui</h1>
+    <div>
+        <h1>Header Aqui</h1>
+        <h2>Componente usado para testes</h2>
+    </div>
 </template>
 
 <script>
