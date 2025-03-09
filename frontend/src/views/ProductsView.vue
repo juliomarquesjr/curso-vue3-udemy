@@ -5,6 +5,8 @@
         </template>
         <template v-else>Sem Header</template>
 
+        <button v-on:click="contador(count)">Botao 1 {{ count }}</button>
+        <button @click="contador(count)">Botao 2 {{ count }}</button>
         <h1>Produtos Page</h1>
         <ul>
             <li v-for="user in users" :key="user.id">
@@ -31,6 +33,7 @@ export default {
         return {
             users: [],
             showHeader: true,
+            count: 0,
         };
     },
 
@@ -46,6 +49,10 @@ export default {
         async getUsers() {
             const { data } = await http.get("/api/users");
             return data;
+        },
+
+        contador(valor) {
+            this.count = valor + 2;
         }
     },
 
