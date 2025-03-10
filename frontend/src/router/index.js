@@ -30,9 +30,14 @@ const router = createRouter({
       component: () => import('../views/FormView.vue'),
     },
     {
-      path: '/form-back',
-      name: 'formulario-back',
-      component: () => import('../views/FormBackView.vue'),
+      path: '/form-produtos',
+      name: 'formulario-produtos',
+      component: () => import('../views/FormProdutosView.vue'),
+    },
+    {
+      path: '/form-create-produtos',
+      name: 'formulario-create-produtos',
+      component: () => import('../views/CreateProdutosView.vue'),
     }
   ],
 })
