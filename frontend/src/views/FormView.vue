@@ -7,7 +7,7 @@
     </p>
 
     <p>
-      <template v-for="user in users">
+      <template v-for="user in users" :key="user.id">
         <input
           type="checkbox"
           name=""
@@ -19,7 +19,7 @@
 
     <p>
       <select name="" v-model="userName">
-        <option v-for="user in users" :value="user.firstName">
+        <option v-for="user in users" :value="user.firstName" :key="user.id">
           {{ user.firstName }}
         </option>
       </select>
