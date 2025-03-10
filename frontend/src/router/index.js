@@ -28,6 +28,11 @@ const router = createRouter({
       path: '/form',
       name: 'formulario',
       component: () => import('../views/FormView.vue'),
+    },
+    {
+      path: '/form-back',
+      name: 'formulario-back',
+      component: () => import('../views/FormBackView.vue'),
     }
   ],
 })
