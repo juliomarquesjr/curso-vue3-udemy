@@ -22,17 +22,22 @@ const router = createRouter({
       // route level code-splitting
       // this generates a separate chunk (About.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
-      component: () => import('../views/AboutView.vue'),
+      component: () => import('@/views/AboutView.vue'),
     },
     {
       path: '/form',
       name: 'formulario',
-      component: () => import('../views/FormView.vue'),
+      component: () => import('@/views/FormView.vue'),
     },
     {
-      path: '/form-back',
-      name: 'formulario-back',
-      component: () => import('../views/FormBackView.vue'),
+      path: '/form-list',
+      name: 'formulario-list-back',
+      component: () => import('@/views/FormListBackView.vue'),
+    },
+    {
+      path: '/form-create',
+      name: 'formulario-create-usuario',
+      component: () => import('@/views/FormCreateBack.vue')
     }
   ],
 })
