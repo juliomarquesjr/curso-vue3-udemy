@@ -1,23 +1,26 @@
 <template>
-  <header>
-    <h2 id="my-app">APP</h2>
-    <div class="wrapper">
-      <nav>
-        <RouterLink to="/">Home</RouterLink>
-        <router-link to="/about">About</router-link>
-        <RouterLink to="/products">Produtos</RouterLink>
-        <RouterLink to="/form">Formulários</RouterLink>
-        <RouterLink to="/form-produtos">Formulários Produtos</RouterLink>
-      </nav>
-    </div>
-  </header>
+  <div>
+    <header>
+      <h2 id="my-app">APP</h2>
+      <div class="wrapper">
+        <nav>
+          <RouterLink to="/">Home</RouterLink>
+          <router-link to="/about">About</router-link>
+          <RouterLink to="/products">Produtos</RouterLink>
+          <RouterLink to="/form">Formulários</RouterLink>
+          <RouterLink to="/form-produtos">Formulários Produtos</RouterLink>
+          <RouterLink to="/slots">Slots</RouterLink>
+        </nav>
+      </div>
+    </header>
 
-  <RouterView />
+    <RouterView />
+  </div>
 </template>
 
 <script setup>
-import { RouterLink, RouterView } from 'vue-router'
-import HelloWorld from '@/components/HelloWorld.vue'
+import { RouterLink, RouterView } from "vue-router";
+import HelloWorld from "@/components/HelloWorld.vue";
 </script>
 
 <style>

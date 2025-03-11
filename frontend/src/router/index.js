@@ -22,22 +22,27 @@ const router = createRouter({
       // route level code-splitting
       // this generates a separate chunk (About.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
-      component: () => import('../views/AboutView.vue'),
+      component: () => import('@/views/AboutView.vue'),
     },
     {
       path: '/form',
       name: 'formulario',
-      component: () => import('../views/FormView.vue'),
+      component: () => import('@/views/FormView.vue'),
     },
     {
       path: '/form-produtos',
       name: 'formulario-produtos',
-      component: () => import('../views/FormProdutosView.vue'),
+      component: () => import('@/views/FormProdutosView.vue'),
     },
     {
       path: '/form-create-produtos',
       name: 'formulario-create-produtos',
-      component: () => import('../views/CreateProdutosView.vue'),
+      component: () => import('@/views/CreateProdutosView.vue'),
+    },
+    {
+      path: '/slots',
+      name: 'slots',
+      component: () => import('@/views/SlotsView.vue')
     }
   ],
 })
