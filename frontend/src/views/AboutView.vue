@@ -1,7 +1,17 @@
 <template>
-    <h1>About Page</h1>
+    <div>
+        <h1>About Page</h1>
+        <ProductsInfo :likes="info.likes" v-bind:comments="info.comments" />
+    </div>
 </template>
 
-<style>
+<script setup>
+import ProductsInfo from '@/components/ProductsInfo.vue';
+import { reactive } from 'vue';
 
-</style>
+const info = reactive({
+    likes: 34,
+    comments: 38
+})
+
+</script>
