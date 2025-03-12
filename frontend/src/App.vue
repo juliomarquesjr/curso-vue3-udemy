@@ -10,6 +10,7 @@
           <RouterLink to="/form">Formulario</RouterLink>
           <RouterLink to="/form-list">Formulario Clientes</RouterLink>
           <router-link to="/slots">Slots</router-link>
+          <router-link to="/livros">Livros</router-link>
         </nav>
       </div>
     </header>
