@@ -7,6 +7,7 @@
           <RouterLink to="/">Home</RouterLink>
           <router-link to="/about">About</router-link>
           <RouterLink to="/products">Produtos</RouterLink>
+          <RouterLink to="/livros">Livros</RouterLink>
           <RouterLink to="/form">Formulários</RouterLink>
           <RouterLink to="/form-produtos">Formulários Produtos</RouterLink>
           <RouterLink to="/slots">Slots</RouterLink>
