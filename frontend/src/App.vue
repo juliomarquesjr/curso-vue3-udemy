@@ -1,5 +1,5 @@
 <template>
-
+  <div>
     <header>
       <h2 id="my-app">APP</h2>
       <div class="wrapper">
@@ -9,12 +9,13 @@
           <RouterLink to="/products">Produtos</RouterLink>
           <RouterLink to="/form">Formulario</RouterLink>
           <RouterLink to="/form-list">Formulario Clientes</RouterLink>
+          <router-link to="/slots">Slots</router-link>
         </nav>
       </div>
     </header>
 
     <RouterView />
-
+  </div>
 </template>
 
 <script setup>
